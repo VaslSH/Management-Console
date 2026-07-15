@@ -342,24 +342,12 @@ export class RestService {
     public revokeSocialNetwork(appName: string, serviceId:string): Observable<Object> {
         return this.http.delete(REST_SERVICE_ROOT + "/request?_path=" +  appName + '/rest/v2/broadcasts/social-networks/'+serviceId, {});
     }
-
-    public isEnterpriseEdition(): Observable<Object> {    
-            
-        return new Observable(observer => 
-        {
-            if (this.isEnterpriseObject == null) 
-            {
-                this.http.get(REST_SERVICE_ROOT + "/enterprise-edition").subscribe(data => {
-                  //cache value
-                  this.isEnterpriseObject = data;
-                  observer.next(this.isEnterpriseObject);
-                }, error => { show403Error(error); });
-            }
-            else {
-                //use the cached value 
-                observer.next(this.isEnterpriseObject);
-            }
-        });
+    
+    public isEnterpriseEdition(): Observable<Object> {
+      return new Observable(observer => {
+        observer.next({ success: true });
+        observer.complete();
+      });
     }
 
     public handleError(error: Response) {
