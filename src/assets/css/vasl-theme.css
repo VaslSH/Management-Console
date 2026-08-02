@@ -1,0 +1,1374 @@
+/*
+  vasl design system — midnight base, electric cyan accent, amber signal.
+  Overrides Bootstrap 4 + Paper Dashboard to the dark vasl palette.
+*/
+
+:root {
+  --background: #0f171f;
+  --foreground: #eff2f5;
+  --card: #0f171f;
+  --card-foreground: #eff2f5;
+  --popover: #0f171f;
+  --popover-foreground: #eff2f5;
+  --primary: #00e0e0;
+  --primary-foreground: #02121a;
+  --secondary: #0f171f;
+  --secondary-foreground: #eff2f5;
+  --muted: #182029;
+  --muted-foreground: #9da6ae;
+  --accent: #132d35;
+  --accent-foreground: #e7f1f1;
+  --destructive: #ea3c3f;
+  --destructive-foreground: #f6f9fb;
+  --border: #262f37;
+  --input: #0f171f;
+  --ring: #00e0e0;
+  --signal: #ffb42f;
+  --signal-foreground: #201308;
+  --surface: #0f171f;
+  --surface-foreground: #eff2f5;
+  --success: #63d18f;
+  --font-display: "Iosevka", ui-monospace, monospace;
+  --font-sans: "Iosevka", ui-monospace, monospace;
+  --font-mono: "Iosevka", ui-monospace, monospace;
+  --font-logo: "Iosevka", ui-monospace, monospace;
+}
+
+html,
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+body,
+.body {
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6,
+.card-title,
+.navbar-brand,
+.modal-title,
+.sidebar .logo a.simple-text {
+  font-family: var(--font-display);
+}
+
+code,
+pre,
+kbd,
+samp,
+.form-control-static,
+.td-name {
+  font-family: var(--font-mono);
+}
+
+.sidebar .logo a.simple-text,
+.sidebar .logo a.logo-mini {
+  font-family: var(--font-logo);
+}
+
+.mat-typography,
+.mat-form-field,
+.mat-dialog-container,
+.mat-menu-panel,
+.mat-select-panel,
+.mat-option,
+.mat-table,
+.mat-paginator,
+.mat-tooltip,
+.mat-button,
+.mat-raised-button,
+.mat-icon-button,
+.mat-stroked-button,
+.mat-flat-button,
+.mat-fab,
+.mat-mini-fab,
+.mat-card,
+.mat-tab-group,
+.mat-tab-label,
+.mat-list-item,
+.mat-expansion-panel,
+.mat-slide-toggle,
+.mat-slider,
+.mat-datepicker-content,
+.mat-checkbox,
+.mat-radio-button,
+.mat-input-element,
+.mat-select-value,
+.mat-option-text {
+  font-family: "Iosevka", ui-monospace, monospace !important;
+}
+
+a {
+  color: var(--primary);
+}
+
+a:hover,
+a:focus {
+  color: var(--ring);
+}
+
+/* Remove default focus highlight rings on mouse/touch, keep for keyboard */
+*:focus:not(:focus-visible) {
+  outline: none !important;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ---------- Layout ---------- */
+
+.wrapper,
+.main-panel,
+.main-panel > .content {
+  background-color: var(--background);
+}
+
+body.nude {
+  background-color: var(--background);
+}
+
+.sidebar {
+  background-color: var(--surface) !important;
+}
+
+.sidebar:before,
+.sidebar:after {
+  background: var(--surface) !important;
+}
+
+.sidebar .logo,
+.sidebar .nav,
+.sidebar .sidebar-wrapper {
+  background-color: transparent;
+}
+
+.sidebar .logo {
+  border-color: var(--border);
+}
+
+.sidebar .simple-text,
+.sidebar .logo-mini,
+.sidebar .user-info .name,
+.sidebar .user-info .email {
+  color: var(--foreground);
+}
+
+.sidebar .nav li a {
+  color: var(--muted-foreground);
+}
+
+.sidebar .nav li a:hover,
+.sidebar .nav li a:focus,
+.sidebar .nav li:hover > a,
+.sidebar .nav li.active > a {
+  color: var(--primary);
+}
+
+.sidebar .nav li.active > a,
+.sidebar .nav li.active > a:hover {
+  background-color: var(--accent);
+}
+
+.sidebar .nav li.active-pro a {
+  background: rgba(0, 224, 224, 0.1);
+  color: var(--primary);
+}
+
+.sidebar .nav i {
+  color: var(--muted-foreground);
+}
+
+.sidebar .nav li.active > a i,
+.sidebar .nav li a:hover i {
+  color: var(--primary);
+}
+
+/* ---------- Navbar ---------- */
+
+.navbar,
+.navbar.navbar-transparent,
+.navbar.navbar-default,
+.navbar:not(.navbar-transparent) {
+  background: var(--surface) !important;
+  border-color: var(--border);
+}
+
+.navbar .navbar-brand,
+.navbar-nav > li > a,
+.navbar-nav .nav-item .nav-link {
+  color: var(--muted-foreground);
+}
+
+.navbar .navbar-brand:hover,
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+  color: var(--foreground);
+}
+
+.navbar-toggle .icon-bar {
+  background: var(--muted-foreground);
+}
+
+/* ---------- Cards ---------- */
+
+.card,
+.card-calendar,
+.card .card-content,
+.card .card-header,
+.card .card-footer {
+  background: transparent;
+  color: var(--card-foreground);
+}
+
+.card {
+  border: none;
+  box-shadow: none;
+}
+
+.card .card-header,
+.card .card-footer {
+  border-color: transparent;
+}
+
+.card .card-title,
+.card .card-header .card-title {
+  color: var(--foreground);
+}
+
+.card .card-category,
+.card .category,
+.card .card-subtitle,
+.card .description,
+.card .card-header .category,
+.card .card-header .card-category {
+  color: var(--muted-foreground);
+}
+
+.card .card-icon i {
+  color: var(--primary);
+}
+
+/* ---------- Tables ---------- */
+
+.table,
+table {
+  color: var(--foreground);
+}
+
+.table > thead > tr > th {
+  color: var(--muted-foreground);
+  border-color: var(--border);
+}
+
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > td {
+  border-color: var(--border);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: transparent;
+}
+
+.table-hover > tbody > tr:hover,
+.table-hover > tbody > tr > td:hover,
+.table-hover > tbody > tr > th:hover {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.table > tbody > tr.active > td,
+.table > tbody > tr.active > th,
+.table > tbody > tr > td.active,
+.table > tbody > tr > th.active {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+/* ---------- Forms / Inputs ---------- */
+
+.form-control,
+select.form-control,
+textarea.form-control,
+input.form-control,
+.bootstrap-tagsinput,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input,
+textarea,
+select,
+input.form-control:focus,
+textarea:focus,
+select:focus {
+  background: var(--input);
+  color: var(--foreground);
+  border-color: var(--border);
+}
+
+.form-control:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.15rem rgba(0, 224, 224, 0.25);
+}
+
+.form-control::placeholder,
+input::placeholder,
+textarea::placeholder,
+input::-webkit-input-placeholder {
+  color: #5b6570;
+}
+
+label,
+.form-group label,
+.control-label,
+.form-horizontal .control-label,
+.radio label,
+.checkbox label,
+legend {
+  color: var(--muted-foreground);
+}
+
+.input-group-addon,
+.input-group-btn .btn {
+  background: var(--secondary);
+  border-color: var(--border);
+  color: var(--muted-foreground);
+}
+
+.input-group input.form-control {
+  border-color: var(--border);
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  background: var(--muted);
+  color: var(--muted-foreground);
+}
+
+hr {
+  border-color: var(--border);
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  color: var(--foreground);
+}
+
+/* Action buttons: unified teal outline */
+.btn-primary,
+.btn-info,
+.btn-success,
+.btn-azure,
+.btn-green {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Outline action buttons: teal text at rest, teal fill + black text on hover */
+.btn-primary:not(.btn-simple):hover,
+.btn-primary:not(.btn-simple):focus,
+.btn-primary:not(.btn-simple):active,
+.btn-info:not(.btn-simple):hover,
+.btn-info:not(.btn-simple):focus,
+.btn-info:not(.btn-simple):active,
+.btn-success:not(.btn-simple):hover,
+.btn-success:not(.btn-simple):focus,
+.btn-success:not(.btn-simple):active {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+/* Filled-by-default action buttons: teal fill + black text */
+.btn-primary.btn-fill,
+.btn-info.btn-fill,
+.btn-success.btn-fill,
+.btn-azure.btn-fill,
+.btn-green.btn-fill,
+.btn-primary.btn-fill:hover,
+.btn-primary.btn-fill:focus,
+.btn-info.btn-fill:hover,
+.btn-info.btn-fill:focus,
+.btn-success.btn-fill:hover,
+.btn-success.btn-fill:focus {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+/* Warning: amber signal outline */
+.btn-warning,
+.btn-orange {
+  border-color: var(--signal);
+  color: var(--signal);
+}
+
+.btn-warning:not(.btn-simple):hover,
+.btn-warning:not(.btn-simple):focus,
+.btn-warning:not(.btn-simple):active,
+.btn-orange:not(.btn-simple):hover,
+.btn-orange:not(.btn-simple):focus,
+.btn-orange:not(.btn-simple):active {
+  background-color: var(--signal);
+  border-color: var(--signal);
+  color: var(--signal-foreground);
+}
+
+.btn-danger,
+.btn-red,
+.btn-danger:hover,
+.btn-red:hover {
+  color: #fff !important;
+}
+
+.btn-default,
+.btn-simple.btn-default {
+  background: var(--secondary);
+  border-color: var(--border);
+  color: var(--secondary-foreground);
+}
+
+.btn-default:hover,
+.btn-default:focus {
+  background: var(--muted);
+  border-color: var(--border);
+  color: var(--foreground);
+}
+
+.btn-link,
+.btn-simple {
+  color: var(--muted-foreground);
+}
+
+.btn-link:hover,
+.btn-simple:hover {
+  color: var(--foreground);
+}
+
+/* Sidebar minimize button: static teal dots, no border, no hover change */
+#minimizeSidebar.btn-fill,
+#minimizeSidebar.btn-fill:hover,
+#minimizeSidebar.btn-fill:focus {
+  background: transparent;
+  border-color: transparent;
+  color: var(--primary);
+}
+
+/* Settings Basic/Advanced select: teal outline, teal fill on hover/open */
+#settings .bootstrap-select .dropdown-toggle,
+#settings select.btn.dropdown-toggle {
+  background: transparent;
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+#settings .bootstrap-select .dropdown-toggle:hover,
+#settings .bootstrap-select .dropdown-toggle:focus,
+#settings .bootstrap-select.open .dropdown-toggle {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+/* Settings Basic/Advanced select dropdown: teal background, dark text */
+#settings .bootstrap-select .dropdown-menu {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+#settings .bootstrap-select .dropdown-menu > li > a {
+  background: transparent;
+  color: var(--primary-foreground);
+}
+
+#settings .bootstrap-select .dropdown-menu > li > a:hover,
+#settings .bootstrap-select .dropdown-menu > li > a:focus,
+#settings .bootstrap-select .dropdown-menu > li.active > a {
+  background: var(--primary-foreground);
+  color: var(--primary);
+}
+
+/* ---------- Dropdown / Popover / Tooltip ---------- */
+
+.dropdown-menu {
+  background: var(--popover);
+  color: var(--popover-foreground);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 30px -8px rgba(0, 0, 0, 0.9);
+}
+
+.dropdown-menu > li > a,
+.dropdown-menu .dropdown-item {
+  color: var(--muted-foreground);
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-menu > .active > a,
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item.active {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.dropdown-menu .divider {
+  background-color: var(--border);
+}
+
+/* Bootstrap 4 JS reveals dropdowns with `.show`; paper-dashboard only knows `.open` */
+.dropdown.show .dropdown-menu,
+.btn-group.show .dropdown-menu,
+.dropdown-menu.show {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.popover {
+  background: var(--popover);
+  color: var(--popover-foreground);
+  border: 1px solid var(--border);
+}
+
+.popover-title {
+  background: var(--secondary);
+  color: var(--foreground);
+  border-bottom-color: var(--border);
+}
+
+.popover.bottom > .arrow:after {
+  border-bottom-color: var(--popover);
+}
+
+.popover.top > .arrow:after {
+  border-top-color: var(--popover);
+}
+
+.popover.right > .arrow:after {
+  border-right-color: var(--popover);
+}
+
+.popover.left > .arrow:after {
+  border-left-color: var(--popover);
+}
+
+.tooltip-inner {
+  background: var(--secondary);
+  color: var(--foreground);
+}
+
+/* ---------- Modal ---------- */
+
+.modal-content {
+  background: var(--card);
+  color: var(--card-foreground);
+  border: 1px solid var(--border);
+}
+
+.modal-header,
+.modal-footer {
+  border-color: var(--border);
+}
+
+.modal-backdrop {
+  background-color: #000;
+}
+
+/* ---------- Alerts / Badges / Labels ---------- */
+
+.alert {
+  color: var(--foreground);
+}
+
+.alert-primary {
+  background: rgba(0, 224, 224, 0.12);
+  color: #baf6f6;
+}
+
+.alert-info {
+  background: rgba(47, 212, 236, 0.12);
+  color: #c5f4fa;
+}
+
+.alert-success {
+  background: rgba(99, 209, 143, 0.12);
+  color: #c6f0d5;
+}
+
+.alert-warning {
+  background: rgba(255, 180, 47, 0.12);
+  color: #ffdfa8;
+}
+
+.alert-danger {
+  background: rgba(234, 60, 63, 0.12);
+  color: #ffc6c8;
+}
+
+.badge,
+.label {
+  color: var(--foreground);
+}
+
+.badge-primary,
+.label-primary,
+.badge-info,
+.label-info,
+.badge-success,
+.label-success,
+.badge-warning,
+.label-warning,
+.badge-danger,
+.label-danger {
+  color: var(--primary-foreground);
+}
+
+.badge-success,
+.label-success,
+.bg-success {
+  color: #05261a;
+}
+
+.badge-warning,
+.label-warning,
+.bg-warning {
+  color: var(--signal-foreground);
+}
+
+.badge-danger,
+.label-danger,
+.bg-danger {
+  color: #fff;
+}
+
+.text-primary,
+.text-info {
+  color: var(--primary) !important;
+}
+
+.text-success {
+  color: var(--success) !important;
+}
+
+.text-warning {
+  color: var(--signal) !important;
+}
+
+.text-danger {
+  color: var(--destructive) !important;
+}
+
+.text-muted {
+  color: var(--muted-foreground) !important;
+}
+
+.bg-primary,
+.bg-info {
+  background-color: var(--primary) !important;
+  color: var(--primary-foreground) !important;
+}
+
+.bg-success {
+  background-color: var(--success) !important;
+}
+
+.bg-warning {
+  background-color: var(--signal) !important;
+}
+
+.bg-danger {
+  background-color: var(--destructive) !important;
+}
+
+.bg-dark {
+  background-color: var(--surface) !important;
+}
+
+/* ---------- Tabs / Navs / Pagination ---------- */
+
+.nav-tabs {
+  border-bottom-color: var(--border);
+}
+
+.nav-tabs > li > a {
+  color: var(--muted-foreground);
+}
+
+.nav-tabs > li > a:hover {
+  color: var(--foreground);
+}
+
+/* Active tab: teal text + teal underline, covers li.active and a.active */
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li > a.active,
+.nav-tabs > li > a.active:hover,
+.nav-tabs > li > a.active:focus {
+  color: var(--primary);
+  border-color: transparent;
+  border-bottom: 2px solid var(--primary);
+}
+
+/* Remove the default light triangle indicator */
+.nav-tabs > li.active :after,
+.nav-tabs > li.active :before {
+  display: none;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  background: var(--card);
+  border-color: var(--border);
+  color: var(--muted-foreground);
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover {
+  background: var(--muted);
+  color: var(--foreground);
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.pagination > .disabled > a,
+.pagination > .disabled > span {
+  background: var(--card);
+  border-color: var(--border);
+  color: var(--muted-foreground);
+}
+
+/* ---------- Progress / Switch / Sliders ---------- */
+
+.progress {
+  background: var(--muted);
+}
+
+.progress-bar,
+.progress-bar-primary {
+  background: var(--primary);
+}
+
+.bootstrap-switch {
+  border-color: var(--border);
+}
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary,
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-info,
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success,
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-warning,
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-danger {
+  color: var(--primary-foreground);
+}
+
+.bootstrap-switch .bootstrap-switch-label {
+  background: var(--secondary);
+  color: var(--foreground);
+}
+
+.bootstrap-switch .bootstrap-switch-handle-off {
+  background: var(--muted);
+}
+
+.noUi-base {
+  background: var(--muted);
+}
+
+.noUi-connect {
+  background: var(--primary);
+}
+
+.noUi-handle {
+  background: var(--foreground);
+  border-color: var(--primary);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.noUi-tooltip {
+  background: var(--card);
+  border-color: var(--border);
+  color: var(--foreground);
+}
+
+/* ---------- Plugins: Chartist ---------- */
+
+.ct-grid {
+  stroke: var(--border);
+}
+
+.ct-label {
+  color: var(--muted-foreground);
+  fill: var(--muted-foreground);
+}
+
+.ct-series-a .ct-line,
+.ct-series-a .ct-bar,
+.ct-series-a .ct-point {
+  stroke: var(--primary);
+}
+
+.ct-series-b .ct-line,
+.ct-series-b .ct-bar,
+.ct-series-b .ct-point {
+  stroke: var(--signal);
+}
+
+.ct-series-c .ct-line,
+.ct-series-c .ct-bar,
+.ct-series-c .ct-point {
+  stroke: var(--success);
+}
+
+.ct-series-d .ct-line,
+.ct-series-d .ct-bar,
+.ct-series-d .ct-point {
+  stroke: var(--destructive);
+}
+
+/* ---------- Plugins: DataTables ---------- */
+
+table.dataTable,
+.dataTables_wrapper .dataTables_info {
+  color: var(--foreground);
+}
+
+table.dataTable thead th {
+  border-bottom: 1px solid var(--border) !important;
+}
+
+table.dataTable.stripe tbody tr.odd,
+table.dataTable.display tbody tr.odd {
+  background: transparent !important;
+}
+
+table.dataTable.stripe tbody tr.odd > td,
+table.dataTable.display tbody tr.odd > td {
+  background: transparent !important;
+}
+
+table.dataTable.display tbody tr:hover,
+table.dataTable.hover tbody tr:hover,
+table.dataTable.display tbody tr:hover > td,
+table.dataTable.hover tbody tr:hover > td {
+  background: var(--accent) !important;
+  color: var(--accent-foreground);
+}
+
+.dataTables_wrapper .dataTables_length select,
+.dataTables_wrapper .dataTables_filter input {
+  background: var(--input);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  background: var(--card) !important;
+  color: var(--muted-foreground) !important;
+  border: 1px solid var(--border) !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  background: var(--primary) !important;
+  color: var(--primary-foreground) !important;
+  border-color: var(--primary) !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  background: var(--muted) !important;
+  color: var(--foreground) !important;
+}
+
+.dataTables_wrapper .dataTables_info {
+  color: var(--muted-foreground);
+}
+
+table.dataTable.row-border tbody th,
+table.dataTable.row-border tbody td,
+table.dataTable.display tbody th,
+table.dataTable.display tbody td {
+  border-top-color: var(--border);
+}
+
+/* ---------- Plugins: FullCalendar ---------- */
+
+.fc-unthemed th,
+.fc-unthemed td,
+.fc-unthemed thead,
+.fc-unthemed tbody,
+.fc-unthemed .fc-divider,
+.fc-unthemed .fc-row,
+.fc-unthemed .fc-content-col {
+  border-color: var(--border);
+}
+
+.fc-unthemed th,
+.fc-unthemed .fc-widget-header {
+  background: var(--muted);
+  color: var(--muted-foreground);
+}
+
+.fc-unthemed td.fc-today {
+  background: var(--accent);
+}
+
+.fc-event,
+.fc-event-dot {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.fc-event .fc-content,
+.fc-event .fc-title {
+  color: var(--primary-foreground);
+}
+
+.fc-toolbar h2 {
+  color: var(--foreground);
+}
+
+.fc-button {
+  background: var(--secondary);
+  border-color: var(--border);
+  color: var(--secondary-foreground);
+}
+
+.fc-state-active,
+.fc-state-hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+/* ---------- Plugins: Bootstrap Select / Tags ---------- */
+
+.bootstrap-select .dropdown-toggle {
+  background: var(--input);
+  color: var(--foreground);
+  border-color: var(--border);
+}
+
+.bootstrap-select .dropdown-toggle:focus {
+  border-color: var(--primary);
+}
+
+.bootstrap-select .dropdown-menu {
+  background: var(--popover);
+  border: 1px solid var(--border);
+}
+
+.bootstrap-select .dropdown-menu li a {
+  color: var(--muted-foreground);
+}
+
+.bootstrap-select .dropdown-menu li a:hover,
+.bootstrap-select .dropdown-menu li a:focus {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.bootstrap-select .dropdown-menu li.selected a {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.bootstrap-select .dropdown-menu .no-results {
+  background: var(--muted);
+  color: var(--muted-foreground);
+}
+
+.bootstrap-select .dropdown-toggle .filter-option {
+  color: var(--foreground);
+}
+
+.bootstrap-select .bs-caret .caret {
+  border-top-color: var(--muted-foreground);
+}
+
+.bootstrap-tagsinput {
+  background: var(--input);
+  border-color: var(--border);
+  color: var(--foreground);
+}
+
+.bootstrap-tagsinput .tag,
+.bootstrap-tagsinput .tag [data-role="remove"] {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+
+/* ---------- Plugins: Date/Time Picker ---------- */
+
+.bootstrap-datetimepicker-widget {
+  background: var(--card);
+  color: var(--foreground);
+}
+
+.bootstrap-datetimepicker-widget table td,
+.bootstrap-datetimepicker-widget table th {
+  border-color: var(--border);
+  color: var(--foreground);
+}
+
+.bootstrap-datetimepicker-widget table thead th {
+  color: var(--muted-foreground);
+}
+
+.bootstrap-datetimepicker-widget table td.day:hover,
+.bootstrap-datetimepicker-widget table td.hour:hover,
+.bootstrap-datetimepicker-widget table td.minute:hover,
+.bootstrap-datetimepicker-widget table td.second:hover {
+  background: var(--muted);
+  color: var(--foreground);
+}
+
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover {
+  background: var(--primary) !important;
+  color: var(--primary-foreground) !important;
+}
+
+.bootstrap-datetimepicker-widget table td.old,
+.bootstrap-datetimepicker-widget table td.new {
+  color: var(--muted-foreground);
+}
+
+.bootstrap-datetimepicker-widget a[data-action],
+.bootstrap-datetimepicker-widget .timepicker a,
+.bootstrap-datetimepicker-widget .list-unstyled li {
+  color: var(--muted-foreground);
+}
+
+.bootstrap-datetimepicker-widget a[data-action]:hover {
+  color: var(--foreground);
+}
+
+/* ---------- Plugins: SweetAlert2 ---------- */
+
+.swal2-popup {
+  background: var(--card);
+  color: var(--card-foreground);
+}
+
+.swal2-title,
+.swal2-content {
+  color: var(--foreground);
+}
+
+.swal2-styled.swal2-confirm {
+  background-color: var(--primary) !important;
+  color: var(--primary-foreground) !important;
+}
+
+.swal2-styled.swal2-cancel {
+  background-color: var(--destructive) !important;
+  color: #fff !important;
+}
+
+/* ---------- Angular Material ---------- */
+
+.mat-table {
+  background: transparent !important;
+}
+
+.mat-header-cell,
+.mat-cell {
+  color: var(--foreground) !important;
+}
+
+.mat-header-cell {
+  color: var(--muted-foreground) !important;
+}
+
+.mat-cell,
+.mat-header-cell {
+  border-bottom-color: var(--border) !important;
+}
+
+.mat-row:hover {
+  background: var(--muted);
+}
+
+.mat-card {
+  background: var(--card);
+  color: var(--card-foreground);
+}
+
+.mat-dialog-container {
+  background: var(--card);
+  color: var(--card-foreground);
+}
+
+.mat-tooltip {
+  background: var(--secondary) !important;
+  color: var(--foreground) !important;
+}
+
+.mat-form-field,
+.mat-form-field-label,
+.mat-input-element,
+.mat-select-value {
+  color: var(--foreground);
+}
+
+.mat-form-field-label {
+  color: var(--muted-foreground);
+}
+
+.mat-form-field-underline {
+  background-color: var(--border);
+}
+
+.mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: var(--primary);
+}
+
+.mat-select-panel {
+  background: var(--popover);
+}
+
+.mat-option {
+  color: var(--muted-foreground);
+}
+
+.mat-option:hover,
+.mat-option.mat-selected {
+  background: var(--accent) !important;
+  color: var(--accent-foreground) !important;
+}
+
+.mat-checkbox-frame {
+  border-color: var(--border) !important;
+}
+
+.mat-checkbox-checked .mat-checkbox-frame,
+.mat-checkbox-indeterminate .mat-checkbox-frame {
+  border-color: var(--primary) !important;
+}
+
+.mat-checkbox-checked .mat-checkbox-background,
+.mat-checkbox-indeterminate .mat-checkbox-background {
+  background-color: var(--primary) !important;
+}
+
+.mat-checkbox-checked .mat-checkbox-checkmark-path {
+  stroke: var(--primary-foreground) !important;
+}
+
+.mat-checkbox-indeterminate .mat-checkbox-mixedmark {
+  background-color: var(--primary-foreground) !important;
+}
+
+.mat-radio-outer-circle {
+  border-color: var(--border);
+}
+
+.mat-radio-checked .mat-radio-outer-circle {
+  border-color: var(--primary) !important;
+}
+
+.mat-radio-inner-circle {
+  background-color: var(--primary) !important;
+}
+
+/* ---------- Checkbox / Radio (grey removed, teal when checked) ---------- */
+
+.checkbox label::before {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px var(--border);
+  opacity: 1;
+}
+
+.checkbox label::after {
+  color: var(--primary);
+}
+
+.checkbox input[type="checkbox"]:checked + label::before {
+  background-color: var(--primary);
+  box-shadow: inset 0 0 0 2px var(--primary);
+}
+
+.checkbox input[type="checkbox"]:checked + label::after {
+  color: var(--primary-foreground);
+}
+
+.checkbox input[type="checkbox"]:not(:disabled):hover + label::before {
+  box-shadow: inset 0 0 0 2px var(--primary);
+}
+
+.checkbox input[type="checkbox"]:disabled + label {
+  color: var(--muted-foreground);
+}
+
+.checkbox input[type="checkbox"]:disabled + label::before {
+  background-color: var(--muted);
+  box-shadow: inset 0 0 0 2px var(--muted);
+}
+
+.radio label::before {
+  color: var(--border);
+  opacity: 1;
+}
+
+.radio label::after {
+  color: var(--primary);
+}
+
+.radio input[type="radio"]:not(:disabled):hover + label::before {
+  color: var(--primary);
+  opacity: 1;
+}
+
+.radio input[type="radio"]:disabled + label {
+  color: var(--muted-foreground);
+}
+
+.radio input[type="radio"]:disabled + label::before,
+.radio input[type="radio"]:disabled + label::after {
+  color: var(--muted);
+}
+
+.mat-tab-header {
+  border-bottom-color: var(--border);
+}
+
+.mat-tab-label {
+  color: var(--muted-foreground);
+}
+
+.mat-tab-label-active {
+  color: var(--primary) !important;
+}
+
+.mat-ink-bar {
+  background-color: var(--primary) !important;
+}
+
+.mat-paginator {
+  background: transparent !important;
+  color: var(--foreground) !important;
+}
+
+.mat-paginator .mat-paginator-page-size-label,
+.mat-paginator .mat-paginator-range-label {
+  color: var(--muted-foreground) !important;
+}
+
+/* ---------- Login / Lock pages ---------- */
+
+.full-page.login-page,
+.full-page.lock-page {
+  background: var(--background);
+}
+
+.full-page.login-page .card,
+.full-page.lock-page .card {
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.full-page.login-page .navbar-brand,
+.full-page.lock-page .navbar-brand {
+  color: var(--foreground);
+}
+
+.full-page.login-page .footer .copyright,
+.full-page.lock-page .footer .copyright,
+.footer .copyright {
+  color: var(--muted-foreground);
+}
+
+/* ---------- Misc ---------- */
+
+.page-header {
+  color: var(--foreground);
+}
+
+.timeline > li > .timeline-panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.timeline > li > .timeline-panel .timeline-body {
+  color: var(--muted-foreground);
+}
+
+.timeline > li > .timeline-panel:after {
+  border-right-color: var(--card);
+}
+
+.chat-message {
+  background: var(--card);
+  border-color: var(--border);
+}
+
+.list-group-item {
+  background: var(--card);
+  border-color: var(--border);
+  color: var(--foreground);
+}
+
+.panel,
+.panel-default > .panel-heading {
+  background: var(--card);
+  border-color: var(--border);
+}
+
+.panel-heading {
+  background: var(--muted);
+  color: var(--foreground);
+}
+
+.thumb-info .thumb-info-title {
+  background: rgba(7, 14, 21, 0.85);
+  color: var(--foreground);
+}
+
+.legend {
+  color: var(--muted-foreground);
+}
+
+/* ---------- Scrollbars ---------- */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a4551;
+}
+
+* {
+  scrollbar-color: var(--border) var(--background);
+}

@@ -147,8 +147,8 @@ export class ClusterComponent implements OnInit, OnDestroy, AfterViewInit {
             text: Locale.getLocaleInterface().wont_be_able_to_revert,
             type: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
+            confirmButtonColor: '#00e0e0',
+            cancelButtonColor: '#ea3c3f',
             confirmButtonText: 'Yes, delete it!'
         }).then(() => {
 		

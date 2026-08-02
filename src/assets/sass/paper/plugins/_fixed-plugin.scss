@@ -84,16 +84,16 @@
     background-color: #7A9E9F;
 }
 .fixed-plugin .badge-info{
-    background-color: #68B3C8;
+    background-color: #2fd4ec;
 }
 .fixed-plugin .badge-success{
-    background-color: #7AC29A;
+    background-color: #63d18f;
 }
 .fixed-plugin .badge-warning{
-    background-color: #F3BB45;
+    background-color: #ffb42f;
 }
 .fixed-plugin .badge-danger{
-    background-color: #DD0330;
+    background-color: #ea3c3f;
 }
 .fixed-plugin .badge-brown{
     background-color: #66615B;
@@ -182,7 +182,7 @@
 }
 
 .fixed-plugin .dropdown-menu{
-    background: #FFFFFF;
+    background: #0f171f;
 }
 
 @media (min-width: 992px){
@@ -223,14 +223,14 @@
     }
     .fixed-plugin .dropdown-menu:before{
         border-bottom: 16px solid rgba(0, 0, 0, 0);
-        border-left: 16px solid #F1EAE0;
+        border-left: 16px solid #0f171f;
         border-top: 16px solid rgba(0,0,0,0);
         right: -16px;
     }
 
     .fixed-plugin .dropdown-menu:after{
         border-bottom: 16px solid rgba(0, 0, 0, 0);
-        border-left: 16px solid #FFFFFF;
+        border-left: 16px solid #0f171f;
         border-top: 16px solid rgba(0,0,0,0);
         right: -15px;
     }

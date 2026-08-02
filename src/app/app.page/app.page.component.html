@@ -750,20 +750,20 @@
                                                 <mat-cell [ngClass]="'viewer-column'" *matCellDef="let row">
 
                                                     <div *ngIf="row.hlsViewerCount > 0">
-                                                        <i class="ti-eye " style="color:#199826; font-size: 1.1em"> </i>
+                                                        <i class="ti-eye " style="color:#63d18f; font-size: 1.1em"> </i>
                                                         HLS : {{row.hlsViewerCount}}
                                                     </div>
                                                     <div *ngIf="row.dashViewerCount > 0">
-                                                        <i class="ti-eye " style="color:#199826; font-size: 1.1em"> </i>
+                                                        <i class="ti-eye " style="color:#63d18f; font-size: 1.1em"> </i>
                                                         DASH : {{row.dashViewerCount}}
                                                     </div>
                                                     <div *ngIf="row.webRTCViewerCount > 0">
-                                                        <i class="ti-eye " style="color:#199826;font-size: 1.1em"
+                                                        <i class="ti-eye " style="color:#63d18f;font-size: 1.1em"
                                                             (click)="webrtcStats(row)"> </i>
                                                         WebRTC : {{row.webRTCViewerCount}}
                                                     </div>
                                                     <div *ngIf="row.rtmpViewerCount > 0">
-                                                        <i class="ti-eye" style="color:#199826;font-size: 1.1em"> </i>
+                                                        <i class="ti-eye" style="color:#63d18f;font-size: 1.1em"> </i>
                                                         RTMP : {{row.rtmpViewerCount}}
                                                     </div>
 
@@ -1344,7 +1344,7 @@
                                                         
                                                         <div class="col-xs-12" style="margin-top:24px">
                                                                 <div *ngIf="appSettings.vp8Enabled && appSettings.h264Enabled" class="category text-left">
-                                                                    <i class="fa fa-info-circle" style="font-size: 20px;color:#DD0330"></i>
+                                                                    <i class="fa fa-info-circle" style="font-size: 20px;color:#00e0e0"></i>
                                                                     If you want to have both VP8 and H.264 streaming, you should add at least one adaptive bitrate below.
                                                                 </div>  
                                                                 
@@ -1391,7 +1391,7 @@
                                                             <div *ngIf="encoderSettings != null && encoderSettings.length==0">
                                                 
                                                                     <label>
-                                                                        <i style="font-size: 20px;color:#DD0330"
+                                                                        <i style="font-size: 20px;color:#00e0e0"
                                                                             class="fa fa-exclamation-circle"></i>
                                                                         Adaptive Streaming is a process intensive
                                                                         operation. Please use it if you know what you're
@@ -1515,7 +1515,7 @@
 
                                                 <div *ngIf="!appSettings.h264Enabled && !appSettings.h265Enabled"
                                                     class="card-content text-left">
-                                                        <i style="font-size: 20px;color:#DD0330"
+                                                        <i style="font-size: 20px;color:#00e0e0"
                                                             class="fa fa-exclamation-circle"></i> H.264 or H.265 is not enabled. Please enable H.264 or H.265 for HLS Streaming
                                                 </div>
                                                 <div *ngIf="appSettings.h264Enabled || appSettings.h264Enabled" class="card-content text-left">
@@ -1610,7 +1610,7 @@
 
                                                 <div *ngIf="!appSettings.h264Enabled && !appSettings.h265Enabled"
                                                     class="form-group text-left" style="margin-left:0px;">
-                                                        <i style="font-size: 20px;color:#DD0330"
+                                                        <i style="font-size: 20px;color:#00e0e0"
                                                             class="fa fa-exclamation-circle"></i> H.264 or H.265 is not enabled. Please enable H.264 or H.265 for DASH Streaming
                                                 </div>
 

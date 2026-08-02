@@ -86,7 +86,7 @@ export class SidebarComponent implements AfterViewInit {
             type: 'info',
             showCancelButton: true,
             confirmButtonColor: '#51cbce',
-            cancelButtonColor: '#d33',
+            cancelButtonColor: '#ea3c3f',
             confirmButtonText: 'Yes, continue',
             cancelButtonText: 'Cancel'
         }).then(() => {

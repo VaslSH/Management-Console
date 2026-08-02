@@ -64,7 +64,7 @@
 body{
     color: $font-color;
     font-size: $font-size-base;
-    font-family: 'Muli', Arial, sans-serif;
+    font-family: 'Iosevka', Arial, sans-serif;
     .wrapper{
         min-height: 100vh;
         position: relative;
@@ -166,8 +166,8 @@ a.dropdown-toggle[aria-expanded="true"] .caret{
 }
 
 .section-gray{
-    background-color: #EEEEEE;
+    background-color: #0f171f;
 }
 .section-white{
-    background-color: #FFFFFF;
+    background-color: #0f171f;
 }

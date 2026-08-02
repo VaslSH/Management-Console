@@ -29,7 +29,7 @@
 }
 .icon-container [class^="ti-"],
 .icon-container [class*=" ti-"] {
-	color: #000;
+	color: #eff2f5;
 	position: absolute;
 	margin-top: 3px;
 	transition: .3s;
@@ -40,7 +40,7 @@
 	margin-top: -5px;
 }
 .icon-container:hover .icon-name {
-	color: #000;
+	color: #eff2f5;
 }
 .icon-name {
 	color: #aaa;
@@ -71,7 +71,7 @@
     text-align: center;
 }
 body.nude{
-    background-color: #f4f3ef;
+    background-color: #0f171f;
 }
 
 .ptz-buttons {

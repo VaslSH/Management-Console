@@ -180,7 +180,7 @@ export class BroadcastEditComponent {
                                 text: "Please Check Username and/or Password",
                                 type: 'error',
 
-                                confirmButtonColor: '#3085d6',
+                                confirmButtonColor: '#00e0e0',
                                 confirmButtonText: 'OK'
                             }).then(() => {
                             }).catch(function () {

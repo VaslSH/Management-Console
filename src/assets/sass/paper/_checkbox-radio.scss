@@ -61,11 +61,11 @@
 
 
 .checkbox input[type="checkbox"]:disabled + label {
-    color: #cfcfcf;
+    color: $muted-color;
 }
 
 .checkbox input[type="checkbox"]:disabled + label::before {
-  background-color: #cfcfcf;
+  background-color: $muted-color;
   cursor: not-allowed;
 }
 
@@ -78,48 +78,48 @@
 }
 
 .checkbox-primary input[type="checkbox"]:checked + label::before {
-  background-color: #428bca;
-  border-color: #428bca;
+  background-color: $primary-color;
+  border-color: $primary-color;
 }
 
 .checkbox-primary input[type="checkbox"]:checked + label::after {
-  color: #fff;
+  color: $color-black;
 }
 
 .checkbox-danger input[type="checkbox"]:checked + label::before {
-  background-color: #d9534f;
-  border-color: #d9534f;
+  background-color: $danger-color;
+  border-color: $danger-color;
 }
 
 .checkbox-danger input[type="checkbox"]:checked + label::after {
-  color: #fff;
+  color: $color-black;
 }
 
 .checkbox-info input[type="checkbox"]:checked + label::before {
-  background-color: #5bc0de;
-  border-color: #5bc0de;
+  background-color: $primary-color;
+  border-color: $primary-color;
 }
 
 .checkbox-info input[type="checkbox"]:checked + label::after {
-  color: #fff;
+  color: $color-black;
 }
 
 .checkbox-warning input[type="checkbox"]:checked + label::before {
-  background-color: #f0ad4e;
-  border-color: #f0ad4e;
+  background-color: $primary-color;
+  border-color: $primary-color;
 }
 
 .checkbox-warning input[type="checkbox"]:checked + label::after {
-  color: #fff;
+  color: $color-black;
 }
 
 .checkbox-success input[type="checkbox"]:checked + label::before {
-  background-color: #5cb85c;
-  border-color: #5cb85c;
+  background-color: $primary-color;
+  border-color: $primary-color;
 }
 
 .checkbox-success input[type="checkbox"]:checked + label::after {
-  color: #fff;
+  color: $color-black;
 }
 
 .radio label {
@@ -173,12 +173,12 @@
 }
 
 .radio input[type="radio"]:disabled + label {
-  color: #cfcfcf;
+  color: $muted-color;
 }
 
 .radio input[type="radio"]:disabled + label::before,
 .radio input[type="radio"]:disabled + label::after {
-  color: #cfcfcf;
+  color: $muted-color;
 }
 
 .radio.radio-inline {
@@ -186,61 +186,61 @@
 }
 
 .radio-primary input[type="radio"] + label::after {
-  background-color: #428bca;
+  background-color: $primary-color;
 }
 
 .radio-primary input[type="radio"]:checked + label::before {
-  border-color: #428bca;
+  border-color: $primary-color;
 }
 
 .radio-primary input[type="radio"]:checked + label::after {
-  background-color: #428bca;
+  background-color: $primary-color;
 }
 
 .radio-danger input[type="radio"] + label::after {
-  background-color: #d9534f;
+  background-color: $danger-color;
 }
 
 .radio-danger input[type="radio"]:checked + label::before {
-  border-color: #d9534f;
+  border-color: $danger-color;
 }
 
 .radio-danger input[type="radio"]:checked + label::after {
-  background-color: #d9534f;
+  background-color: $danger-color;
 }
 
 .radio-info input[type="radio"] + label::after {
-  background-color: #5bc0de;
+  background-color: $primary-color;
 }
 
 .radio-info input[type="radio"]:checked + label::before {
-  border-color: #5bc0de;
+  border-color: $primary-color;
 }
 
 .radio-info input[type="radio"]:checked + label::after {
-  background-color: #5bc0de;
+  background-color: $primary-color;
 }
 
 .radio-warning input[type="radio"] + label::after {
-  background-color: #f0ad4e;
+  background-color: $primary-color;
 }
 
 .radio-warning input[type="radio"]:checked + label::before {
-  border-color: #f0ad4e;
+  border-color: $primary-color;
 }
 
 .radio-warning input[type="radio"]:checked + label::after {
-  background-color: #f0ad4e;
+  background-color: $primary-color;
 }
 
 .radio-success input[type="radio"] + label::after {
-  background-color: #5cb85c;
+  background-color: $primary-color;
 }
 
 .radio-success input[type="radio"]:checked + label::before {
-  border-color: #5cb85c;
+  border-color: $primary-color;
 }
 
 .radio-success input[type="radio"]:checked + label::after {
-  background-color: #5cb85c;
+  background-color: $primary-color;
 }

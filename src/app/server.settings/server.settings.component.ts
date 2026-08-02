@@ -401,7 +401,7 @@ export class ServerSettingsComponent implements  OnDestroy, OnInit, AfterViewIni
                     text: this.licenseStatusExplaination,
                     type: 'error',
 
-                    confirmButtonColor: '#3085d6',
+                    confirmButtonColor: '#00e0e0',
                     confirmButtonText: 'OK',
 
                     onClose: function () {
@@ -433,7 +433,7 @@ export class ServerSettingsComponent implements  OnDestroy, OnInit, AfterViewIni
                     text: "Please Renew Your License ",
                     type: 'info',
 
-                    confirmButtonColor: '#3085d6',
+                    confirmButtonColor: '#00e0e0',
                     confirmButtonText: 'OK',
 
                     onClose: function () {
@@ -549,8 +549,8 @@ export class ServerSettingsComponent implements  OnDestroy, OnInit, AfterViewIni
                 text: "Server will be restarted automatically after this operaiton",
                 type: 'warning',
                 showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
+                confirmButtonColor: '#00e0e0',
+                cancelButtonColor: '#ea3c3f',
                 confirmButtonText: 'Proceed'
             }).then(() => {
     
@@ -624,8 +624,8 @@ export class ServerSettingsComponent implements  OnDestroy, OnInit, AfterViewIni
             text: Locale.getLocaleInterface().wont_be_able_to_revert,
             type: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
+            confirmButtonColor: '#00e0e0',
+            cancelButtonColor: '#ea3c3f',
             confirmButtonText: 'Yes, delete it!'
         }).then(data => {
 

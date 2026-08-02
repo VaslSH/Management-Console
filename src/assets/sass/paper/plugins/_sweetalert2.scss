@@ -496,7 +496,7 @@ body.swal2-iosfix {
     position: absolute;
     width: 60px;
     height: 120px;
-    background: #fff;
+    background: #0f171f;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
 }
@@ -536,7 +536,7 @@ body.swal2-iosfix {
 .swal2-icon.swal2-success .fix {
     width: 7px;
     height: 90px;
-    background-color: #fff;
+    background-color: #0f171f;
     position: absolute;
     left: 28px;
     top: 8px;
@@ -582,7 +582,7 @@ body.swal2-iosfix {
 }
 
 .swal2-progresssteps .swal2-progresscircle {
-    background: #3085d6;
+    background: #00e0e0;
     border-radius: 2em;
     color: #fff;
     height: 2em;
@@ -601,7 +601,7 @@ body.swal2-iosfix {
 }
 
 .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep {
-    background: #3085d6;
+    background: #00e0e0;
 }
 
 .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal2-progresscircle {
@@ -613,7 +613,7 @@ body.swal2-iosfix {
 }
 
 .swal2-progresssteps .swal2-progressline {
-    background: #3085d6;
+    background: #00e0e0;
     height: .4em;
     margin: 0 -1px;
     z-index: 10;

@@ -881,7 +881,7 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
                 title: "TOTP Playback ",
                 text: "TOTP Playback is not currently supported through web panel",
                 type: 'error',
-                confirmButtonColor: '#3085d6',
+                confirmButtonColor: '#00e0e0',
                 confirmButtonText: 'OK'
             }).then(() => {
             }).catch(function () {
@@ -1127,7 +1127,7 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
                 title: "TOTP Playback ",
                 text: "TOTP Playback is not currently supported through web panel",
                 type: 'error',
-                confirmButtonColor: '#3085d6',
+                confirmButtonColor: '#00e0e0',
                 confirmButtonText: 'OK'
             }).then(() => {
             }).catch(function () {
@@ -1145,7 +1145,7 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
                 text: "It cannot get token for Undefined VoD type",
                 type: 'error',
 
-                confirmButtonColor: '#3085d6',
+                confirmButtonColor: '#00e0e0',
                 confirmButtonText: 'OK'
             }).then(() => {
             }).catch(function () {
@@ -1180,8 +1180,8 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
             text: Locale.getLocaleInterface().wont_be_able_to_revert,
             type: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
+            confirmButtonColor: '#00e0e0',
+            cancelButtonColor: '#ea3c3f',
             confirmButtonText: 'Yes, delete it!'
         }).then(() => {
 
@@ -1296,8 +1296,8 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
             text: Locale.getLocaleInterface().wont_be_able_to_revert,
             type: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
+            confirmButtonColor: '#00e0e0',
+            cancelButtonColor: '#ea3c3f',
             confirmButtonText: 'Yes, delete it!'
         }).then(data => {
             this.restService.deleteBroadcast(this.appName, streamId, REMOTE_HOST_ADDRESS)
@@ -1698,7 +1698,7 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
                         text: "Please Check Username and/or Password",
                         type: 'error',
 
-                        confirmButtonColor: '#3085d6',
+                        confirmButtonColor: '#00e0e0',
                         confirmButtonText: 'OK'
                     }).then(() => {
 
@@ -1712,7 +1712,7 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
                         text: "An unknown error occured for your IP Camera. Please report this case to support@vasl.sh with your logs and IP camera address",
                         type: 'error',
 
-                        confirmButtonColor: '#3085d6',
+                        confirmButtonColor: '#00e0e0',
                         confirmButtonText: 'OK'
                     }).then(() => {
 
@@ -1796,7 +1796,7 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
                             text: "Please Check Camera URL",
                             type: 'error',
 
-                            confirmButtonColor: '#3085d6',
+                            confirmButtonColor: '#00e0e0',
                             confirmButtonText: 'OK'
                         }).then(() => {
 
@@ -1812,7 +1812,7 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
                             text: "Please Check Username and/or Password",
                             type: 'error',
 
-                            confirmButtonColor: '#3085d6',
+                            confirmButtonColor: '#00e0e0',
                             confirmButtonText: 'OK'
                         }).then(() => {
 
@@ -1828,7 +1828,7 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
                             text: "Please Decrease CPU Load Then Try Again",
                             type: 'error',
 
-                            confirmButtonColor: '#3085d6',
+                            confirmButtonColor: '#00e0e0',
                             confirmButtonText: 'OK'
                         }).then(() => {
 
@@ -1947,7 +1947,7 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
                             text: "Please Decrease CPU Load Then Try Again",
                             type: 'error',
 
-                            confirmButtonColor: '#3085d6',
+                            confirmButtonColor: '#00e0e0',
                             confirmButtonText: 'OK'
                         }).then(() => {
                         }).catch(function () {
@@ -2044,8 +2044,8 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
                             title: "Warning",
                             text: "The URL is inaccessible. If you're adding a local file and token security is enabled for play in the app, ensure to add a play token to the URL.",
                             showCancelButton: false,
-                            confirmButtonColor: '#3085d6',
-                            cancelButtonColor: '#d33',
+                            confirmButtonColor: '#00e0e0',
+                            cancelButtonColor: '#ea3c3f',
                             confirmButtonText: 'OK'
                         })
                     }
@@ -2054,8 +2054,8 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
                             title: "Warning",
                             text: "Stream format cannot be found in this url",
                             showCancelButton: false,
-                            confirmButtonColor: '#3085d6',
-                            cancelButtonColor: '#d33',
+                            confirmButtonColor: '#00e0e0',
+                            cancelButtonColor: '#ea3c3f',
                             confirmButtonText: 'OK'
                         })
                     }
@@ -2103,8 +2103,8 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
                 title: "Warning",
                 text: "Please Select VoD to Add the Playlist",
                 showCancelButton: false,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
+                confirmButtonColor: '#00e0e0',
+                cancelButtonColor: '#ea3c3f',
                 confirmButtonText: 'OK'
             })
             return;
@@ -2258,7 +2258,7 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
                             text: "Please Decrease CPU Load Then Try Again",
                             type: 'error',
 
-                            confirmButtonColor: '#3085d6',
+                            confirmButtonColor: '#00e0e0',
                             confirmButtonText: 'OK'
                         }).then(() => {
 
@@ -3014,8 +3014,8 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
                 title: "Warning",
                 text: "Please Select Streams to Delete",
                 showCancelButton: false,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
+                confirmButtonColor: '#00e0e0',
+                cancelButtonColor: '#ea3c3f',
                 confirmButtonText: 'OK'
             })
             return;
@@ -3026,8 +3026,8 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
             text: Locale.getLocaleInterface().wont_be_able_to_revert,
             type: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
+            confirmButtonColor: '#00e0e0',
+            cancelButtonColor: '#ea3c3f',
             confirmButtonText: 'Yes, delete them!'
         }).then(() => {
 
@@ -3157,8 +3157,8 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
                 title: "Warning",
                 text: "Please Select Streams to Delete",
                 showCancelButton: false,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
+                confirmButtonColor: '#00e0e0',
+                cancelButtonColor: '#ea3c3f',
                 confirmButtonText: 'OK'
             })
             return;
@@ -3169,8 +3169,8 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
             text: Locale.getLocaleInterface().wont_be_able_to_revert,
             type: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
+            confirmButtonColor: '#00e0e0',
+            cancelButtonColor: '#ea3c3f',
             confirmButtonText: 'Yes, delete them!'
         }).then(data => {
 
@@ -3255,11 +3255,11 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
          if (broadcast.packetLostRatio > 0.02 || broadcast.rttMs > 100 || broadcast.jitterMs > 50 ||
             broadcast.pendingPacketSize > 15 || broadcast.encoderQueueSize > 15 || (broadcast.speed > 0 && broadcast.speed < 0.7)) 
          {
-            return "#FFC107";
+            return "#ffb42f";
          }
          else 
          {
-            return "#28a745"
+            return "#63d18f"
          }
 
       }

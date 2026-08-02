@@ -1,81 +1,81 @@
-$font-color:                 #66615b !default;
-$fill-font-color:            rgba(255, 255, 255, 0.85);
+$font-color:                 #eff2f5 !default;
+$fill-font-color:            rgba(239, 242, 245, 0.85);
 
 $none:                       0   !default;
 $border-thin:                1px !default;
 $border-thick:               2px !default;
 
-$white-color:                #FFFFFF !default;
-$white-bg:                   #FFFFFF !default;
+$white-color:                #eff2f5 !default;
+$white-bg:                   #0f171f !default;
 
-$smoke-bg:                   #F5F5F5 !default;
-$pale-bg:                    #F9F7F3 !default;
-$medium-pale-bg:             #F1EAE0 !default;
+$smoke-bg:                   #0f171f !default;
+$pale-bg:                    #0f171f !default;
+$medium-pale-bg:             #0f171f !default;
 
-$table-line-color:           #CCC5B9 !default;
-$muted-color:                #a49e93 !default;
+$table-line-color:           #262f37 !default;
+$muted-color:                #9da6ae !default;
 
-$black-bg:                   rgba(30,30,30,.97) !default;
+$black-bg:                   #0f171f !default;
 
-$popover-color:              #FAE6A4 !default;
+$popover-color:              #0f171f !default;
 
 
-$black-color:                #333333 !default;
-$black-hr:                   #444444 !default;
+$black-color:                #eff2f5 !default;
+$black-hr:                   #262f37 !default;
 
 $white-background-color:     #FFFFFF !default;
 $brown-background-color:     $font-color !default;
-$black-background-color:     #312f2c !default;
+$black-background-color:     #0f171f !default;
 
-$light-gray:                 #E3E3E3 !default;
-$medium-gray:                #cfcfca !default;
-$dark-gray:                  #9A9A9A !default;
+$light-gray:                 #2c3742 !default;
+$medium-gray:                #262f37 !default;
+$dark-gray:                  #6b7681 !default;
 
-$gray-input-bg:              #F3F2EE !default;
-$gray-input-outline:         #e8e7e3 !default;
-$danger-input-bg:            #FFC0A4 !default;
-$success-input-bg:           #ABF3CB !default;
-$other-medium-gray:          #A49E93 !default;
+$gray-input-bg:              #0f171f !default;
+$gray-input-outline:         #0f171f !default;
+$danger-input-bg:            rgba(234, 60, 63, 0.15) !default;
+$success-input-bg:           rgba(99, 209, 143, 0.15) !default;
+$other-medium-gray:          #9da6ae !default;
 $transparent-bg:             transparent !default;
 
-$default-color:              #66615B !default;
-$default-bg:                 #66615B !default;
+$default-color:              #9da6ae !default;
+$default-bg:                 #0f171f !default;
 $default-states-color:       darken($default-color,11%) !default;
 
-$primary-color:              #7A9E9F !default;
-$primary-bg:                 #7A9E9F !default;
+$primary-color:              #00e0e0 !default;
+$primary-bg:                 #00e0e0 !default;
 $primary-states-color:       darken($primary-color,11%) !default;
 
-$success-color:              #7AC29A !default;
-$success-bg:                 #7AC29A !default;
+$success-color:              #63d18f !default;
+$success-bg:                 #63d18f !default;
 $success-states-color:       darken($success-color,11%) !default;
 
-$info-color:                 #68B3C8 !default;
-$info-bg:                    #68B3C8 !default;
+$info-color:                 #2fd4ec !default;
+$info-bg:                    #2fd4ec !default;
 $info-states-color:          darken($info-color,11%) !default;
 
-$warning-color:              #F3BB45 !default;
-$warning-bg:                 #F3BB45 !default;
+$warning-color:              #ffb42f !default;
+$warning-bg:                 #ffb42f !default;
 $warning-states-color:       darken($warning-color,11%) !default;
 
 
-$danger-color:               #DD0330 !default;
-$danger-bg:                  #DD0330 !default;
+$danger-color:               #ea3c3f !default;
+$danger-bg:                  #ea3c3f !default;
 $danger-states-color:        darken($danger-color,8%) !default;
 
 
-$link-disabled-color:        #666666 !default;
+$link-disabled-color:        #6b7681 !default;
 
 // General Colors
 
 
-$color-azure:                #23CCEF;
-$color-purple:               #9368E9;
-$color-red:                  #FB404B;
-$color-green:                #7AC29A;
-$color-orange:               #FFA534;
-$color-blue:                 #447DF7;
-$color-black:                #5e5e5e;
+$color-azure:                #00e0e0;
+$color-purple:               #8a75d6;
+$color-red:                  #ea3c3f;
+$color-green:                #63d18f;
+$color-orange:               #ffb42f;
+$color-blue:                 #2fd4ec;
+$color-black:                #0a0e12;
 
 
 /*      light colors - used for select dropdown         */
@@ -85,7 +85,7 @@ $light-azure:                rgba($info-color, .2);
 $light-green:                rgba($success-color, .2);
 $light-orange:               rgba($warning-color, .2);
 $light-red:                  rgba($danger-color, .2);
-$placeholder-gray:           #C3C3C3 !default;
+$placeholder-gray:           #5b6570 !default;
 
 
 /*           Social buttons            */
@@ -222,24 +222,24 @@ $padding-icon:					 12px !default;
 $border-radius-icon:		     15px !default;
 
 
-$white-navbar:              rgba(#FFFFFF, .96);
-$blue-navbar:               rgba(#34ACDC, .98);
-$azure-navbar:              rgba(#5BCAFF, .98);
-$green-navbar:              rgba(#4CD964, .98);
-$orange-navbar:             rgba(#FF9500, .98);
-$red-navbar:                rgba(#FF4C40, .98);
+$white-navbar:              rgba(#0f171f, .96);
+$blue-navbar:               rgba(#00e0e0, .98);
+$azure-navbar:              rgba(#2fd4ec, .98);
+$green-navbar:              rgba(#63d18f, .98);
+$orange-navbar:             rgba(#ffb42f, .98);
+$red-navbar:                rgba(#ea3c3f, .98);
 
-$bg-nude:               #f4f3ef !default;
-$bg-primary:            #8ECFD5 !default;
-$bg-info:               #7CE4FE !default;
-$bg-success:            #8EF3C5 !default;
-$bg-warning:            #FFE28C !default;
-$bg-danger:             #FF8F5E !default;
+$bg-nude:               #0f171f !default;
+$bg-primary:            rgba(#00e0e0, .25) !default;
+$bg-info:               rgba(#2fd4ec, .25) !default;
+$bg-success:            rgba(#63d18f, .25) !default;
+$bg-warning:            rgba(#ffb42f, .25) !default;
+$bg-danger:             rgba(#ea3c3f, .25) !default;
 
-$background-light-grey:     #E8E7E3 !default;
-$background-lighter-grey:   #F0EFEB !default;
-$font-background-light-grey: #9C9B99 !default;
-$font-hover-background-light-grey: #5E5E5C !default;
+$background-light-grey:     #0f171f !default;
+$background-lighter-grey:   #0f171f !default;
+$font-background-light-grey: #9da6ae !default;
+$font-hover-background-light-grey: #eff2f5 !default;
 
 $topbar-x:             topbar-x !default;
 $topbar-back:          topbar-back !default;
@@ -268,7 +268,7 @@ $padding-zero:                   0px !default;
 $sidebar-width:               calc(100% - 260px) !default;
 $sidebar-mini-width:          calc(100% - 80px) !default;
 
-$medium-dark-gray:           #AAAAAA !default;
+$medium-dark-gray:           #6b7681 !default;
 
 
 // border radius for buttons
@@ -281,60 +281,60 @@ $border-radius-small-top:     $border-radius-small $border-radius-small 0 0 !def
 
 
 //variables used in cards
-$card-black-color:          #252422 !default;
-$card-muted-color:          #ccc5b9 !default;
+$card-black-color:          #0f171f !default;
+$card-muted-color:          #9da6ae !default;
 
-$card-background-blue:      #b8d8d8 !default;
-$card-font-blue:            #506568 !default;
-$card-subtitle-blue:        #7a9e9f !default;
+$card-background-blue:      #0f2a30 !default;
+$card-font-blue:            #d8f6f6 !default;
+$card-subtitle-blue:        #9fdada !default;
 
-$card-background-green:      #d5e5a3 !default;
-$card-font-green:            #60773d !default;
-$card-subtitle-green:        #92ac56 !default;
+$card-background-green:      #16301f !default;
+$card-font-green:            #d3efd9 !default;
+$card-subtitle-green:        #8fcf9f !default;
 
-$card-background-yellow:      #ffe28c !default;
-$card-font-yellow:            #b25825 !default;
-$card-subtitle-yellow:        #d88715 !default;
+$card-background-yellow:      #33290f !default;
+$card-font-yellow:            #ffe6b8 !default;
+$card-subtitle-yellow:        #f0b54f !default;
 
-$card-background-brown:      #d6c1ab !default;
-$card-font-brown:            #75442e !default;
-$card-subtitle-brown:        #a47e65 !default;
+$card-background-brown:      #2a1e14 !default;
+$card-font-brown:            #ead5c2 !default;
+$card-subtitle-brown:        #c2a185 !default;
 
-$card-background-purple:      #baa9ba !default;
-$card-font-purple:            #3a283d !default;
-$card-subtitle-purple:        #5a283d !default;
+$card-background-purple:      #251d33 !default;
+$card-font-purple:            #e2d6ea !default;
+$card-subtitle-purple:        #bda7cd !default;
 
-$card-background-orange:      #ff8f5e !default;
-$card-font-orange:            #772510 !default;
-$card-subtitle-orange:        #e95e37 !default;
+$card-background-orange:      #331a0f !default;
+$card-font-orange:            #ffd8c4 !default;
+$card-subtitle-orange:        #f0a085 !default;
 
 
 //variables used for sidebar
-$sidebar-background-dark-blue: #506367;
+$sidebar-background-dark-blue: #0f171f;
 
-$sidebar-background-blue:      #b8d8d8 !default;
-$sidebar-font-blue:            #506568 !default;
-$sidebar-subtitle-blue:        #7a9e9f !default;
+$sidebar-background-blue:      #0f2a30 !default;
+$sidebar-font-blue:            #d8f6f6 !default;
+$sidebar-subtitle-blue:        #9fdada !default;
 
-$sidebar-background-green:      #d5e5a3 !default;
-$sidebar-font-green:            #60773d !default;
-$sidebar-subtitle-green:        #92ac56 !default;
+$sidebar-background-green:      #16301f !default;
+$sidebar-font-green:            #d3efd9 !default;
+$sidebar-subtitle-green:        #8fcf9f !default;
 
-$sidebar-background-yellow:      #ffe28c !default;
-$sidebar-font-yellow:            #b25825 !default;
-$sidebar-subtitle-yellow:        #d88715 !default;
+$sidebar-background-yellow:      #33290f !default;
+$sidebar-font-yellow:            #ffe6b8 !default;
+$sidebar-subtitle-yellow:        #f0b54f !default;
 
-$sidebar-background-brown:      #d6c1ab !default;
-$sidebar-font-brown:            #75442e !default;
-$sidebar-subtitle-brown:        #a47e65 !default;
+$sidebar-background-brown:      #2a1e14 !default;
+$sidebar-font-brown:            #ead5c2 !default;
+$sidebar-subtitle-brown:        #c2a185 !default;
 
-$sidebar-background-purple:      #baa9ba !default;
-$sidebar-font-purple:            #3a283d !default;
-$sidebar-subtitle-purple:        #5a283d !default;
+$sidebar-background-purple:      #251d33 !default;
+$sidebar-font-purple:            #e2d6ea !default;
+$sidebar-subtitle-purple:        #bda7cd !default;
 
-$sidebar-background-orange:      #ff8f5e !default;
-$sidebar-font-orange:            #772510 !default;
-$sidebar-subtitle-orange:        #e95e37 !default;
+$sidebar-background-orange:      #331a0f !default;
+$sidebar-font-orange:            #ffd8c4 !default;
+$sidebar-subtitle-orange:        #f0a085 !default;
 
 // Small screen / tablet
 //** Deprecated `$screen-sm` as of v3.0.1
@@ -364,18 +364,18 @@ $filter-orange:       darken($warning-color, 10%);
 $filter-red:          darken($danger-color, 10%);
 
 // variable used in footers
-$black-footer-bg:            #252422 !default;
-$brown-font-color:    #A49E9E !default;
-$brown-font-color-hover: #F1EAE0 !default;
+$black-footer-bg:            #0f171f !default;
+$brown-font-color:    #9da6ae !default;
+$brown-font-color-hover: #eff2f5 !default;
 
 
 // variables for Bootstrap Select 1.12.1
-$color-red-error: rgb(185, 74, 72) !default;
-$color-grey-arrow: rgba(204, 204, 204, 0.2) !default;
+$color-red-error: rgb(234, 60, 63) !default;
+$color-grey-arrow: rgba(157, 166, 174, 0.2) !default;
 
 $width-default: 100% !default; // 3 960px-grid columns
 
 $zindex-select-dropdown: 1060 !default; // must be higher than a modal background (1050)
 
 //** Placeholder text color
-$input-color-placeholder: #999 !default;
+$input-color-placeholder: #5b6570 !default;

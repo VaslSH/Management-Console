@@ -222,7 +222,7 @@ export class AuthService implements CanActivate {
                             text: "Please Renew Your License ",
                             type: 'info',
 
-                            confirmButtonColor: '#3085d6',
+                            confirmButtonColor: '#00e0e0',
                             confirmButtonText: 'OK',
 
                             onClose: function () {
@@ -249,7 +249,7 @@ export class AuthService implements CanActivate {
                             text: "Please Validate Your License ",
                             type: 'error',
 
-                            confirmButtonColor: '#3085d6',
+                            confirmButtonColor: '#00e0e0',
                             confirmButtonText: 'OK',
 
                             onClose: function () {

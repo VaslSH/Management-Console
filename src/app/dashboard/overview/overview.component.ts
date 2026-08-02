@@ -94,8 +94,8 @@ export class OverviewComponent implements OnInit {
             lineWidth: 9,
             size: 160,
             scaleColor: false,
-            trackColor: '#BBDEFB',
-            barColor: '#1565C0',
+            trackColor: '#182029',
+            barColor: '#00e0e0',
             animate: false,
         });
     }
@@ -154,8 +154,8 @@ export class OverviewComponent implements OnInit {
                     inputPlaceholder: 'Please enter your email address',
 
                     showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
+                    confirmButtonColor: '#00e0e0',
+                    cancelButtonColor: '#ea3c3f',
                     confirmButtonText: 'Submit',
                 }).then((value) => {
 
@@ -432,7 +432,7 @@ export class OverviewComponent implements OnInit {
                             text: data["message"],
                             type: 'error',
             
-                            confirmButtonColor: '#3085d6',
+                            confirmButtonColor: '#00e0e0',
                             confirmButtonText: 'OK'
                         }).then(() => {
                         }).catch(function () {
@@ -450,7 +450,7 @@ export class OverviewComponent implements OnInit {
                             text:  "Make sure that you use alphanumeric characters in the application name",
                             type: 'error',
             
-                            confirmButtonColor: '#3085d6',
+                            confirmButtonColor: '#00e0e0',
                             confirmButtonText: 'OK'
                         }).then(() => {
                         }).catch(function () {
@@ -466,8 +466,8 @@ export class OverviewComponent implements OnInit {
             text: Locale.getLocaleInterface().wont_be_able_to_revert,
             type: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
+            confirmButtonColor: '#00e0e0',
+            cancelButtonColor: '#ea3c3f',
             confirmButtonText: 'Yes, delete it!'
         }).then(() => {
 
@@ -498,7 +498,7 @@ export class OverviewComponent implements OnInit {
                             text:  "Please send logs files under log directory to the Vasl Support(support@vasl.sh)",
                             type: 'error',
             
-                            confirmButtonColor: '#3085d6',
+                            confirmButtonColor: '#00e0e0',
                             confirmButtonText: 'OK'
                         }).then(() => {
                         }).catch(function () {

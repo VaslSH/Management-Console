@@ -305,8 +305,8 @@ export class PlaylistEditComponent implements AfterViewInit{
                             title: "Warning",
                             text: "The URL is inaccessible. If you're adding a local file and token security is enabled for play in the app, ensure to add a play token to the URL.",
                             showCancelButton: false,
-                            confirmButtonColor: '#3085d6',
-                            cancelButtonColor: '#d33',
+                            confirmButtonColor: '#00e0e0',
+                            cancelButtonColor: '#ea3c3f',
                             confirmButtonText: 'OK'
                         })
                     }
@@ -315,8 +315,8 @@ export class PlaylistEditComponent implements AfterViewInit{
                             title: "Warning",
                             text: "Stream format cannot be found in this url",
                             showCancelButton: false,
-                            confirmButtonColor: '#3085d6',
-                            cancelButtonColor: '#d33',
+                            confirmButtonColor: '#00e0e0',
+                            cancelButtonColor: '#ea3c3f',
                             confirmButtonText: 'OK'
                         })
                     }
@@ -379,8 +379,8 @@ export class PlaylistEditComponent implements AfterViewInit{
                 title: "Warning",
                 text: "Please Select VoD to Add the Playlist",
                 showCancelButton: false,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
+                confirmButtonColor: '#00e0e0',
+                cancelButtonColor: '#ea3c3f',
                 confirmButtonText: 'OK'
             })
             return;
@@ -471,8 +471,8 @@ export class PlaylistEditComponent implements AfterViewInit{
                             title: "Warning",
                             text: "URL cannot be accessible",
                             showCancelButton: false,
-                            confirmButtonColor: '#3085d6',
-                            cancelButtonColor: '#d33',
+                            confirmButtonColor: '#00e0e0',
+                            cancelButtonColor: '#ea3c3f',
                             confirmButtonText: 'OK'
                         })
                     }
@@ -481,8 +481,8 @@ export class PlaylistEditComponent implements AfterViewInit{
                             title: "Warning",
                             text: "Stream format cannot be found in this url",
                             showCancelButton: false,
-                            confirmButtonColor: '#3085d6',
-                            cancelButtonColor: '#d33',
+                            confirmButtonColor: '#00e0e0',
+                            cancelButtonColor: '#ea3c3f',
                             confirmButtonText: 'OK'
                         })
                     }

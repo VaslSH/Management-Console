@@ -32,6 +32,7 @@
     "@angular/platform-server": "^10.0.8",
     "@angular/router": "^10.0.8",
     "@antmedia/web_player": "3.0.0-SNAPSHOT-2025-Jun-28-08-06",
+    "@fontsource/iosevka": "^5.3.0",
     "@ngui/ngui": "0.15.2",
     "bootstrap": "4.5.2",
     "bootstrap-notify": "3.1.3",
