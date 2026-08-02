@@ -188,7 +188,7 @@ export class OverviewComponent implements OnInit {
                         } else {
                             $.notify({
                                 icon: "ti-alert",
-                                message: "Your request couldn't be sent. Please try again or send email to support@antmedia.io"
+                                message: "Your request couldn't be sent. Please try again or send email to support@vasl.sh"
                             }, {
                                 type: 'warning',
                                 delay: 5000,
@@ -495,7 +495,7 @@ export class OverviewComponent implements OnInit {
                     if (error == null || error.status != 403 ) {
                         swal({
                             title: "Application is not deleted",
-                            text:  "Please send logs files under log directory to the Ant Media Support(support@antmedia.io)",
+                            text:  "Please send logs files under log directory to the Vasl Support(support@vasl.sh)",
                             type: 'error',
             
                             confirmButtonColor: '#3085d6',

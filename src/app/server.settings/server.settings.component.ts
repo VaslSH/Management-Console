@@ -373,7 +373,7 @@ export class ServerSettingsComponent implements  OnDestroy, OnInit, AfterViewIni
             else if (this.currentLicence.status == this.licenseExpireError) 
             {
                 this.licenseStatus = "Expired";
-                this.licenseStatusExplaination = "Your license is expired, please renew your license at antmedia.io";
+                this.licenseStatusExplaination = "Your license is expired, please renew your license at vasl.sh";
             }
             else if (this.currentLicence.status == this.invalidKeyError ||
                 this.currentLicence.status == this.noLicenseFounrError) 
@@ -383,7 +383,7 @@ export class ServerSettingsComponent implements  OnDestroy, OnInit, AfterViewIni
             else if (this.currentLicence.status == this.licenseBlocked) 
             {
                 this.licenseStatus = "Suspended";
-                this.licenseStatusExplaination = "Your license is suspended. Please renew your license at antmedia.io";
+                this.licenseStatusExplaination = "Your license is suspended. Please renew your license at vasl.sh";
             }
             else if (this.currentLicence.status == this.allLicensesUsedError) 
             {
@@ -391,7 +391,7 @@ export class ServerSettingsComponent implements  OnDestroy, OnInit, AfterViewIni
             }
             else  if (this.currentLicence.status == this.TRIAL_PERIOD_ENDED) {
                 this.licenseStatus = "Trial expired";
-                this.licenseStatusExplaination = "Your trial period is expired. Please buy a license at antmedia.io or extend your trial";
+                this.licenseStatusExplaination = "Your trial period is expired. Please buy a license at vasl.sh or extend your trial";
             }
             
             if (this.authService.licenceWarningDisplay && !this.serverSettings.buildForMarket) {

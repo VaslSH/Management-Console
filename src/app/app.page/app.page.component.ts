@@ -1709,7 +1709,7 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
                 else {
                     swal({
                         title: "Camera Error",
-                        text: "An unknown error occured for your IP Camera. Please report this case to support@antmedia.io with your logs and IP camera address",
+                        text: "An unknown error occured for your IP Camera. Please report this case to support@vasl.sh with your logs and IP camera address",
                         type: 'error',
 
                         confirmButtonColor: '#3085d6',
@@ -1848,7 +1848,7 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
                     if (show403Error(error) == false) {
                         $.notify({
                             icon: "ti-save",
-                            message: typeof error.error["message"] != "undefined" ? error.error["message"] : "Unknown problem. Reach to technical support(support@antmedia.io)"
+                            message: typeof error.error["message"] != "undefined" ? error.error["message"] : "Unknown problem. Reach to technical support(support@vasl.sh)"
                         }, {
                             type: "warning",
                             delay: 2000,
@@ -1969,7 +1969,7 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
                     if (show403Error(error) == false) {
                         $.notify({
                             icon: "ti-save",
-                            message: typeof error.error["message"] != "undefined" ? error.error["message"] : "Unknown problem. Reach to technical support(support@antmedia.io)"
+                            message: typeof error.error["message"] != "undefined" ? error.error["message"] : "Unknown problem. Reach to technical support(support@vasl.sh)"
                         }, {
                             type: "warning",
                             delay: 2000,
@@ -2281,7 +2281,7 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
                     if (show403Error(error) == false) {
                         $.notify({
                             icon: "ti-save",
-                            message: typeof error.error["message"] != "undefined" ? error.error["message"] : "Unknown problem. Reach to technical support(support@antmedia.io)"
+                            message: typeof error.error["message"] != "undefined" ? error.error["message"] : "Unknown problem. Reach to technical support(support@vasl.sh)"
                         }, {
                             type: "warning",
                             delay: 2000,
@@ -2520,7 +2520,7 @@ export class AppPageComponent implements OnInit, OnDestroy, AfterViewInit {
                     if (show403Error(error) == false) {
                         $.notify({
                             icon: "ti-save",
-                            message: typeof error.error["message"] != "undefined" ? error.error["message"] : "Unknown problem. Reach to technical support(support@antmedia.io)"
+                            message: typeof error.error["message"] != "undefined" ? error.error["message"] : "Unknown problem. Reach to technical support(support@vasl.sh)"
                         }, {
                             type: "warning",
                             delay: 2000,

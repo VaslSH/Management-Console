@@ -2,11 +2,11 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="antMediaServer" datatype="html">
+      <trans-unit id="vaslMediaServer" datatype="html">
         <source>
-		Ant Media Server
+		Vasl Media Server
 	</source>
-  <target>Ant Medya Sunucusu</target>
+  <target>Vasl Medya Sunucusu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/sidebar/sidebar.component.ts</context>
           <context context-type="linenumber">8</context>
@@ -500,8 +500,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="loginPageHeader" datatype="html">
-        <source>Manager of Ant Media Server</source>
-        <target>Ant Medya Sunucu Yöneticisi</target>
+        <source>Manager of Vasl Media Server</source>
+        <target>Vasl Medya Sunucu Yöneticisi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/pages/login/login.component.ts</context>
           <context context-type="linenumber">10</context>

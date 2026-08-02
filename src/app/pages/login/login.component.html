@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" i18n="@@loginPageHeader" routerLinkActive = "active" [routerLink]="['/dashboard/overview']">Ant Media Server Management Panel</a>
+            <a class="navbar-brand" i18n="@@loginPageHeader" routerLinkActive = "active" [routerLink]="['/dashboard/overview']">Vasl Media Server Management Panel</a>
         </div>
         <!--
         <div class="collapse navbar-collapse">
@@ -32,6 +32,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3" *ngIf="!firstLogin">
+                        <div class="text-center">
+                            <img src="/assets/img/vasl-logo.png" alt="Vasl" style="width:120px; margin-bottom:15px;" />
+                        </div>
                         <form (ngSubmit)="loginUser()">
                             <div class="card" data-background="color" data-color="blue">
                                 <div class="card-header">
@@ -152,7 +155,7 @@
         <footer class="footer footer-transparent">
             <div class="container">
                 <div class="copyright">
-                    &copy; {{test | date: 'yyyy'}}  <i class="fa fa-heart heart"></i> by <a href="http://antmedia.io">AntMedia</a>
+                    &copy; {{test | date: 'yyyy'}}  <i class="fa fa-heart heart"></i> by <a href="http://vasl.sh">Vasl</a>
                 </div>
             </div>
         </footer>

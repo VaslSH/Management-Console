@@ -122,7 +122,7 @@ export class SupportComponent implements OnInit, OnDestroy, AfterViewInit {
             } else {
                 $.notify({
                     icon: "ti-alert",
-                    message: "Your request couldn't be sent. Please try again or send email to support@antmedia.io"
+                    message: "Your request couldn't be sent. Please try again or send email to support@vasl.sh"
                 }, {
                     type: 'warning',
                     delay: 1900,
@@ -138,7 +138,7 @@ export class SupportComponent implements OnInit, OnDestroy, AfterViewInit {
             if (!error && error.status != 403) {
                 $.notify({
                     icon: "ti-alert",
-                    message: "Your request couldn't be sent. Please try again or send email to support@antmedia.io"
+                    message: "Your request couldn't be sent. Please try again or send email to support@vasl.sh"
                 }, {
                     type: 'warning',
                     delay: 1900,

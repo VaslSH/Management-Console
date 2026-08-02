@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ant-media-server-management-console": {
+    "vasl-media-server-management-console": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -93,18 +93,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ant-media-server-management-console:build"
+            "browserTarget": "vasl-media-server-management-console:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ant-media-server-management-console:build:production"
+              "browserTarget": "vasl-media-server-management-console:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ant-media-server-management-console:build"
+            "browserTarget": "vasl-media-server-management-console:build"
           }
         },
         "test": {
@@ -163,7 +163,7 @@
         }
       }
     },
-    "ant-media-server-management-console-e2e": {
+    "vasl-media-server-management-console-e2e": {
       "root": "e2e",
       "sourceRoot": "e2e",
       "projectType": "application",
@@ -172,7 +172,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "ant-media-server-management-console:serve"
+            "devServerTarget": "vasl-media-server-management-console:serve"
           }
         },
         "lint": {
@@ -187,7 +187,7 @@
       }
     }
   },
-  "defaultProject": "ant-media-server-management-console",
+  "defaultProject": "vasl-media-server-management-console",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",

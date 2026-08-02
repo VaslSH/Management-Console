@@ -4,7 +4,7 @@ export let Locale_Turkish: LocaleInterface =
 {
     
     notEnterprise : 'Bu özellik bir kurumsal özelliktir.'
-    + 'Detaylı bilgi için lütfen <a href="https://antmedia.io/" target="_blank"><b>antmedia.io</b></a> sitesini ziyaret ediniz',
+    + 'Detaylı bilgi için lütfen <a href="https://vasl.sh/" target="_blank"><b>vasl.sh</b></a> sitesini ziyaret ediniz',
     ketNotdefined:"Lütfen servisle ilgili istemci id ve şifresini tanımlayınız.",
     vodFileNotDeleted : "Video maalesef silinemedi.",
     broadcast_not_deleted : "Yayın maalesef silinemedi.",
@@ -32,9 +32,9 @@ export let Locale_Turkish: LocaleInterface =
     english_language : "English",
     live_stream_will_be_deleted: "Yayın silinecek ve bu işlemi geri alamayacaksınız!",
     broadcast_updated: "Yayın güncellendi.",
-    broadcast_not_updated: "Yayın güncellenemedi. Lütfen aşağıdaki mesajı support@antmedia.io'ya gönderiniz.",
+    broadcast_not_updated: "Yayın güncellenemedi. Lütfen aşağıdaki mesajı support@vasl.sh'ya gönderiniz.",
     playlist_updated: "Playlist güncellendi.",
-    playlist_not_updated: "Playlist güncellenemedi. Lütfen aşağıdaki mesajı support@antmedia.io'ya gönderiniz.",
+    playlist_not_updated: "Playlist güncellenemedi. Lütfen aşağıdaki mesajı support@vasl.sh'ya gönderiniz.",
     error_occured: "Bir hata oluştu. Lütfen sonra tekrar deneyiniz",
     authentication_timeout_message: "Yetkilendirme zaman aşımına uğradı. Lütfen işlemi biraz daha hızlı bir şekilde tekrar deneyiniz.",
     live_streaming_not_enabled_message: "Canlı Yayın özelliği hesabınızda etkin değil. Lütfen ilgili servis üzerinden etkinleştirin",

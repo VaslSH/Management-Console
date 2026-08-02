@@ -186,7 +186,7 @@ export class ServerSettings {
 export enum SslConfigurationType {
     NO_SSL = "No SSL",
     CUSTOM_DOMAIN ="Use Your Domain",
-    ANTMEDIA_SUBDOMAIN ="Subdomain of antmedia.cloud",
+    VASL_SUBDOMAIN ="Subdomain of vasl.cloud",
     CUSTOM_CERTIFICATE = "Import Your Certificate"
     
   }

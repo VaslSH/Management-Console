@@ -3,7 +3,7 @@ import {LocaleInterface} from './locale.interface';
 export let Locale_English: LocaleInterface = 
 {
     notEnterprise : 'This is an Enterprise function.'
-    + 'Please  visit <a href="https://antmedia.io/" target="_blank"><b>antmedia.io</b></a> for detailed information',
+    + 'Please  visit <a href="https://vasl.sh/" target="_blank"><b>vasl.sh</b></a> for detailed information',
     ketNotdefined:"Please enter service client id and client secret in app configuration.",
     vodFileNotDeleted : "VoD file is not deleted",
     broadcast_not_deleted : "Broadcast is not deleted",
@@ -31,9 +31,9 @@ export let Locale_English: LocaleInterface =
     turkish_language : "Türkçe",
     english_language : "English",
     broadcast_updated: "Stream is updated.",
-    broadcast_not_updated: "Stream is not updated. Please send below message to support@antmedia.io",
+    broadcast_not_updated: "Stream is not updated. Please send below message to support@vasl.sh",
     playlist_updated: "Playlist is updated.",
-    playlist_not_updated: "Playlist is not updated. Please send below message to support@antmedia.io.",
+    playlist_not_updated: "Playlist is not updated. Please send below message to support@vasl.sh.",
     error_occured: "An error is occured. Please try again later",
     authentication_timeout_message: "Authentication timeout. Please try again with a faster manner",
     live_streaming_not_enabled_message: "Live streaming is not enabled in your account. Please enable it.",

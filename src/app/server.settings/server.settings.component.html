@@ -93,7 +93,7 @@
                                         <fieldset *ngIf="isEnterpriseEdition && !serverSettings.buildForMarket  && currentLicence.type ==='hourly'"> <!-- -->
                                             <div class="form-group"  >
                                                 <label class="col-sm-2 control-label">Hour Used <a
-                                                    href="https://license.antmedia.io/?licenseId={{serverSettings.licenceKey}}"
+                                                    href="https://license.vasl.sh/?licenseId={{serverSettings.licenceKey}}"
                                                     target="_blank"
                                                     matTooltip="Please click it for more usage detail">
                                                     <i class="fa fa-info-circle"></i></a>
@@ -116,11 +116,11 @@
 
                                 <!-- don't let wrong configuration show the two messages at the same time-->
                                 <p *ngIf="isEnterpriseEdition && serverSettings.buildForMarket">
-                                    The Ant Media Server Enterprise Marketplace Edition is all set - no license activation required. Enjoy!
+                                    The Vasl Media Server Enterprise Marketplace Edition is all set - no license activation required. Enjoy!
                                 </p>
 
                                 <p *ngIf="!isEnterpriseEdition">
-                                    This is the Ant Media Server Community Edition -  no license activation required. Enjoy!
+                                    This is the Vasl Media Server Community Edition -  no license activation required. Enjoy!
                                 </p>
                             </div>
                                 <div class="tab-pane container-fluid" id="users" >
@@ -375,8 +375,8 @@
                                                              class="dropdown-toggle form-control" required>
                                                         <option value="{{getSslConfigurationTypeName(ConfigurationTypes.CUSTOM_DOMAIN)}}">{{ ConfigurationTypes.CUSTOM_DOMAIN }}</option>
                                                        
-                                                        <option *ngIf ="licenseStatus == 'Valid' || serverSettings.buildForMarket" value="{{getSslConfigurationTypeName(ConfigurationTypes.ANTMEDIA_SUBDOMAIN)}}">{{ ConfigurationTypes.ANTMEDIA_SUBDOMAIN }}</option>
-                                                        <option disabled="true" *ngIf ="licenseStatus != 'Valid' && !serverSettings.buildForMarket" value="{{getSslConfigurationTypeName(ConfigurationTypes.ANTMEDIA_SUBDOMAIN)}}">{{ ConfigurationTypes.ANTMEDIA_SUBDOMAIN }} - Enterprise License Required</option>
+                                                        <option *ngIf ="licenseStatus == 'Valid' || serverSettings.buildForMarket" value="{{getSslConfigurationTypeName(ConfigurationTypes.VASL_SUBDOMAIN)}}">{{ ConfigurationTypes.VASL_SUBDOMAIN }}</option>
+                                                        <option disabled="true" *ngIf ="licenseStatus != 'Valid' && !serverSettings.buildForMarket" value="{{getSslConfigurationTypeName(ConfigurationTypes.VASL_SUBDOMAIN)}}">{{ ConfigurationTypes.VASL_SUBDOMAIN }} - Enterprise License Required</option>
 
                                                         <option value="{{getSslConfigurationTypeName(ConfigurationTypes.CUSTOM_CERTIFICATE)}}">{{ ConfigurationTypes.CUSTOM_CERTIFICATE }}</option>
                                                         
@@ -392,8 +392,8 @@
                                         <fieldset>
                                                 <label class="col-sm-2 control-label">Domain (FQDN)</label>
 
-                                                <div class="col-sm-10" *ngIf="sslConfType == getSslConfigurationTypeName(ConfigurationTypes.ANTMEDIA_SUBDOMAIN)">
-                                                    <p class="form-control-static text-left">Subdomain of antmedia.cloud will be automatically allocated for you</p>
+                                                <div class="col-sm-10" *ngIf="sslConfType == getSslConfigurationTypeName(ConfigurationTypes.VASL_SUBDOMAIN)">
+                                                    <p class="form-control-static text-left">Subdomain of vasl.cloud will be automatically allocated for you</p>
                                                 </div>
                                 
                                                 <div class="col-sm-10" *ngIf="sslConfType == getSslConfigurationTypeName(ConfigurationTypes.CUSTOM_DOMAIN) || sslConfType == getSslConfigurationTypeName(ConfigurationTypes.CUSTOM_CERTIFICATE)">

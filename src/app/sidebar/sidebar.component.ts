@@ -90,7 +90,7 @@ export class SidebarComponent implements AfterViewInit {
             confirmButtonText: 'Yes, continue',
             cancelButtonText: 'Cancel'
         }).then(() => {
-            window.open('https://calendly.com/antmedia', '_blank');
+            window.open('https://calendly.com/vasl', '_blank');
         });
     }
 
