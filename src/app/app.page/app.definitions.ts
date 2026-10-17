@@ -222,6 +222,7 @@ export class AppSettings {
                 public remoteAllowedCIDR: string,
                 public h264Enabled: boolean,
                 public vp8Enabled: boolean,
+                public vp9Enabled: boolean,
                 public av1Enabled: boolean,
                 public transcodeEnabled: boolean,
                 public dataChannelEnabled: boolean,

@@ -1,4 +1,4 @@
-<div class="main-content">
+ufdau<div class="main-content">
     <div class="container-fluid">
         <div class="row">
 
@@ -1318,6 +1318,19 @@
                                                         </div>
                                                         <div class="col-xs-12">
                                                             <div class="checkbox">
+                                                                <input id="vp9Encoder" name="vp9Encoder"
+                                                                    [(ngModel)]="appSettings.vp9Enabled"
+                                                                    type="checkbox">
+
+                                                                <label for="vp9Encoder">
+                                                                    VP9 
+                                                                </label>
+                                                            </div>
+                                                            <p class="category text-left">Explicitly required for WebM Recording</p>
+                                                            
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <div class="checkbox">
                                                                 <input id="av1Encoder" name="av1Encoder"
                                                                     [(ngModel)]="appSettings.av1Enabled"
                                                                     type="checkbox">
@@ -1343,9 +1356,9 @@
                                                         </div>
                                                         
                                                         <div class="col-xs-12" style="margin-top:24px">
-                                                                <div *ngIf="appSettings.vp8Enabled && appSettings.h264Enabled" class="category text-left">
+                                                                <div *ngIf="(appSettings.vp8Enabled || appSettings.vp9Enabled) && appSettings.h264Enabled" class="category text-left">
                                                                     <i class="fa fa-info-circle" style="font-size: 20px;color:#00e0e0"></i>
-                                                                    If you want to have both VP8 and H.264 streaming, you should add at least one adaptive bitrate below.
+                                                                    If you want to have both VP8/VP9 and H.264 streaming, you should add at least one adaptive bitrate below.
                                                                 </div>  
                                                                 
                                                         </div>
@@ -1945,12 +1958,12 @@
                                                             </div>
                                                         </div>
 
-                                                        <div *ngIf="!appSettings.vp8Enabled && !appSettings.av1Enabled" class="col-xs-12 card-content category text-left" style="font-size:16px" >
+                                                        <div *ngIf="!appSettings.vp8Enabled && !appSettings.vp9Enabled && !appSettings.av1Enabled" class="col-xs-12 card-content category text-left" style="font-size:16px" >
                                                             <i 
                                                                 class="fa fa-exclamation-circle"></i> 
-                                                                VP8 or AV1 is not enabled. Please enable VP8 or AV1 for WebM Recording
+                                                                VP8, VP9 or AV1 is not enabled. Please enable VP8, VP9 or AV1 for WebM Recording
                                                         </div>
-                                                        <div *ngIf="appSettings.vp8Enabled || appSettings.av1Enabled">
+                                                        <div *ngIf="appSettings.vp8Enabled || appSettings.vp9Enabled || appSettings.av1Enabled">
                                                             <div class="col-xs-12">
                                                                 <div class="checkbox">
                                                                     <input
