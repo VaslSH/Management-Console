@@ -62,7 +62,7 @@ jobs:
           - Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
           Download the zip, extract it, and use the `dist/` output in downstream projects.
-        artifacts: management-console-${{ steps.release_package.outputs.branch }}.zip
+        artifacts: ${{ steps.release_package.outputs.branch }}.zip
         token: ${{ secrets.GITHUB_TOKEN }}
         allowUpdates: true
         replacesArtifacts: true
