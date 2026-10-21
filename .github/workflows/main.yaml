@@ -53,8 +53,8 @@ jobs:
       if: github.event_name == 'push' && startsWith(github.ref, 'refs/heads/')
       uses: ncipollo/release-action@v1
       with:
-        tag: snapshot-${{ steps.release_package.outputs.branch }}
-        name: Snapshot (${{ github.ref_name }})
+        tag: ${{ steps.release_package.outputs.branch }}
+        name: (${{ github.ref_name }})
         body: |
           Snapshot build of the management console for branch `${{ github.ref_name }}`.
 
