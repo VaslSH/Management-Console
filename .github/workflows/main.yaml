@@ -1,0 +1,147 @@
+# Static export on every branch, tag, and pull request.
+# A push to a branch publishes or replaces one GitHub Release.
+# The tag and zip name are the branch name, with "/" replaced by "-".
+#
+#   https://github.com/<owner>/<repo>/releases/download/<branch>/<branch>.zip
+#
+# The zip contains dist/index.html, the same layout as the previous console,
+# so the media server release script can unpack it.
+#
+# A push to the default branch also publishes that export to GitHub Pages.
+# Pages is one site per repository, so only the default branch is deployed.
+# In the repository settings, set Pages → Build and deployment → Source to
+# GitHub Actions before the first deploy.
+
+name: Build and Deploy
+
+on:
+  push:
+    branches: ['**']
+    tags: ['*']
+  pull_request:
+    branches: ['**']
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: build-${{ github.workflow }}-${{ github.ref }}
+  # A newer push replaces an in-progress build, except on the default branch,
+  # where a GitHub Pages deploy should finish.
+  cancel-in-progress: ${{ github.ref != format('refs/heads/{0}', github.event.repository.default_branch) }}
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    outputs:
+      pages: ${{ steps.pages_site.outputs.ready }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+        env:
+          HUSKY: 0
+
+      - name: Build
+        run: bun run build
+        env:
+          NEXT_TELEMETRY_DISABLED: 1
+
+      - name: Package dist for release
+        if: github.event_name == 'push' && startsWith(github.ref, 'refs/heads/')
+        id: release_package
+        run: |
+          set -euo pipefail
+          test -f out/index.html
+          BRANCH="${GITHUB_REF#refs/heads/}"
+          # Git release tags and asset names cannot contain '/'
+          SANITIZED="${BRANCH//\//-}"
+          ZIP="${SANITIZED}.zip"
+          rm -rf dist
+          mkdir dist
+          cp -a out/. dist/
+          zip -r "$ZIP" dist/
+          echo "tag=${SANITIZED}" >> "$GITHUB_OUTPUT"
+          echo "zip=${ZIP}" >> "$GITHUB_OUTPUT"
+
+      - name: Publish or update branch release
+        if: github.event_name == 'push' && startsWith(github.ref, 'refs/heads/')
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ steps.release_package.outputs.tag }}
+          name: ${{ github.ref_name }}
+          body: |
+            Static build of `dist/` for branch `${{ github.ref_name }}`.
+
+            - Commit: ${{ github.sha }}
+            - Workflow: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          artifacts: ${{ steps.release_package.outputs.zip }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          allowUpdates: true
+          replacesArtifacts: true
+          commit: ${{ github.sha }}
+          makeLatest: false
+
+      - name: Read GitHub Pages base path
+        if: github.event_name == 'push' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        id: pages_config
+        continue-on-error: true
+        uses: actions/configure-pages@v5
+
+      - name: Build GitHub Pages site
+        if: github.event_name == 'push' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        id: pages_site
+        env:
+          NEXT_TELEMETRY_DISABLED: 1
+          NEXT_PUBLIC_HOSTED_PREVIEW: 'true'
+          CONFIGURE_OUTCOME: ${{ steps.pages_config.outcome }}
+          CONFIGURE_BASE_PATH: ${{ steps.pages_config.outputs.base_path }}
+        run: |
+          set -euo pipefail
+          if [ "$CONFIGURE_OUTCOME" = "success" ]; then
+            base_path="$CONFIGURE_BASE_PATH"
+          else
+            repo="${GITHUB_REPOSITORY#*/}"
+            if [[ "$repo" == *.github.io ]]; then
+              base_path=""
+            else
+              base_path="/${repo}"
+            fi
+          fi
+          echo "Pages base path: '${base_path}'"
+          BASE_PATH="$base_path" bun run build
+          test -f out/index.html
+          if [ -n "$base_path" ]; then
+            grep -q "${base_path}/_next/" out/index.html
+          fi
+          echo "ready=true" >> "$GITHUB_OUTPUT"
+
+      - name: Upload GitHub Pages artifact
+        if: steps.pages_site.outputs.ready == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    if: needs.build.outputs.pages == 'true'
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
