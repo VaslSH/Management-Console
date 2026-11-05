@@ -7,10 +7,10 @@
 # The zip contains dist/index.html, the same layout as the previous console,
 # so the media server release script can unpack it.
 #
-# A push to the default branch also publishes that export to GitHub Pages.
-# Pages is one site per repository, so only the default branch is deployed.
+# A push to newManagementConsole also publishes that export to GitHub Pages.
 # In the repository settings, set Pages → Build and deployment → Source to
-# GitHub Actions before the first deploy.
+# GitHub Actions. Under Settings → Environments → github-pages, allow
+# newManagementConsole.
 
 name: Build and Deploy
 
@@ -28,9 +28,9 @@ permissions:
 
 concurrency:
   group: build-${{ github.workflow }}-${{ github.ref }}
-  # A newer push replaces an in-progress build, except on the default branch,
+  # A newer push replaces an in-progress build, except on newManagementConsole,
   # where a GitHub Pages deploy should finish.
-  cancel-in-progress: ${{ github.ref != format('refs/heads/{0}', github.event.repository.default_branch) }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/newManagementConsole' }}
 
 jobs:
   build:
@@ -89,13 +89,13 @@ jobs:
           makeLatest: false
 
       - name: Read GitHub Pages base path
-        if: github.event_name == 'push' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/newManagementConsole'
         id: pages_config
         continue-on-error: true
         uses: actions/configure-pages@v5
 
       - name: Build GitHub Pages site
-        if: github.event_name == 'push' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/newManagementConsole'
         id: pages_site
         env:
           NEXT_TELEMETRY_DISABLED: 1
